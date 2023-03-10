@@ -16,7 +16,10 @@ export function Login(){
             <Input placeholder="Enter Password"/>
         
         </VStack>
-      <Box align={"center"} marginTop={"18px"}>  <Button colorScheme={"blue"} >Submit</Button></Box>
+      <Box align={"center"} marginTop={"18px"} >  <Button colorScheme={"blue"} 
+      bgGradient={'linear(to-l, #7928CA, #FF0080)'}
+      _hover={{ bgGradient:'linear(to-l, #7928CA, orange)'}}
+      >Submit</Button></Box>
        </Box>
 
         </>
