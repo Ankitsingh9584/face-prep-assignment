@@ -11,11 +11,13 @@ const [user,setUser]=useState(userDetails);
 
 const navigate=useNavigate();
 const toast=useToast();
+// saving values to states
 const setUserFun=(target)=>{
     const {value,name}=target;
     setUser({...user,[name]:value})
 };
 
+// button onclick function for checking username and password
 const checkUser=()=>{
     if(user.userName==="" || user.password===""){
         return  toast({
@@ -26,10 +28,13 @@ const checkUser=()=>{
             isClosable: true,
           })
     }
+    // if username and password matches navigate to home page
 if(user.userName==="foo" && user.password==="bar"){
 return navigate("/home")
 }
-else{
+else{ 
+    // if  username and password not matches
+    setUser({userName:"",password:""});
  return   toast({
         title: 'Wrong Credentials',
         description: "Please try to login with right username and password",
@@ -47,10 +52,11 @@ else{
        <Text fontSize={"4xl"} fontWeight={"bold"} align={"center"}>Login</Text>
         <VStack w={"90%"} align={"start"} margin={"auto"}>
             <Text fontWeight={"bold"} fontSize={"2xl"}>UserName :</Text>
-            <Input name="userName" onChange={(e)=>setUserFun(e.target)} placeholder="Enter UserName"/>
+            <Input value={user.userName} name="userName" onChange={(e)=>setUserFun(e.target)} placeholder="Enter UserName"/>
             <Text fontWeight={"bold"} fontSize={"2xl"}>Password :</Text>
-            <Input name="password" onChange={(e)=>setUserFun(e.target)}  placeholder="Enter Password"/>
+            <Input value={user.password} name="password" onChange={(e)=>setUserFun(e.target)}  placeholder="Enter Password"/>
         
+
         </VStack>
       <Box align={"center"} marginTop={"18px"} >  <Button colorScheme={"blue"} 
       bgGradient={'linear(to-l, #7928CA, #FF0080)'}
