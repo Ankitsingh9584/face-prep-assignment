@@ -1,4 +1,4 @@
-import { VStack,Input,Text, Button, Box,useToast } from "@chakra-ui/react";
+import { VStack,Input,Text, Button, Box,useToast,Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +42,8 @@ else{
 
     return(
         <>
-       <Box boxShadow={"md"} w={"35%"} margin={"auto"} padding={"34px"} marginTop={"100px"}>
+        <Image w={{base:"45%",md:"35%",lg:'20%'}} h={"29px"} margin={"auto"} marginTop={"15px"} src="https://www.faceprep.in/statics/media/logo_web.47d10a50.svg"/>
+       <Box boxShadow={"md"} w={{base:"90%",md:"65%",lg:"38%"}} margin={"auto"} padding={"34px"} marginTop={"100px"}>
        <Text fontSize={"4xl"} fontWeight={"bold"} align={"center"}>Login</Text>
         <VStack w={"90%"} align={"start"} margin={"auto"}>
             <Text fontWeight={"bold"} fontSize={"2xl"}>UserName :</Text>

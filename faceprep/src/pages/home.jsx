@@ -46,7 +46,7 @@ export function Home(){
          loader={<Loader/> }
          endMessage={<h1>No more data</h1>}
       >
-        <VStack w={"100%"} margin={"auto"} >
+        <VStack w={"100%"} margin={"auto"} marginTop={"25px"} >
          {user && user.map((el)=>{
             return(
                 <>
