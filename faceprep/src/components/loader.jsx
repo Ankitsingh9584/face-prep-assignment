@@ -2,7 +2,7 @@ import { Box,Image } from "@chakra-ui/react";
 
 
 
-
+// loading component
 export function Loader(){
     return (
         <>
