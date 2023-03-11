@@ -20,7 +20,11 @@ export function Home(){
   
 //  api call function
     const callApi=async()=>{
-        setTimeout(async () => {
+        let id;
+        if(id){
+            clearTimeout(id)
+        }
+       id= setTimeout(async () => {
         let res=await axios.get(`https://randomuser.me/api/?page=${page}&results=15`);
       
           setUser([...user,...res.data.results]);
