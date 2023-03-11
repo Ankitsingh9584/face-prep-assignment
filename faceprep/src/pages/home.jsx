@@ -7,7 +7,7 @@ import { Dashboard } from "../components/dashboard";
 // using  InfiniteScroll for handelling scrolling part
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
+// main page that is home component where all the users are going to show on infinite scrolling
 export function Home(){
     const [loading,setLoading]=useState(false);
     const [user,setUser]=useState([]);
