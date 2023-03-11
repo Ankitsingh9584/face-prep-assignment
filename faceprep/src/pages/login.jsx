@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const userDetails={userName:"",password:""}
 
-
+// login component where user can login
 export function Login(){
 const [user,setUser]=useState(userDetails);
 
