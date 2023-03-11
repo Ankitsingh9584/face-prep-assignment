@@ -16,7 +16,6 @@ const setUserFun=(target)=>{
     const {value,name}=target;
     setUser({...user,[name]:value})
 };
-
 // button onclick function for checking username and password
 const checkUser=()=>{
     if(user.userName==="" || user.password===""){
