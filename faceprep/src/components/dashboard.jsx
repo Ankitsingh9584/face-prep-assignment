@@ -2,7 +2,7 @@ import { Image, Flex, Text} from "@chakra-ui/react";
 import { color } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-
+// dashboard component where logo and logout is there
 
 export function Dashboard(){
     const navigate=useNavigate();
