@@ -56,8 +56,7 @@ return(
             <Text fontWeight={"bold"} fontSize={"2xl"}>Password :</Text>
             <Input value={user.password} name="password" onChange={(e)=>setUserFun(e.target)}  placeholder="Enter Password"/>
         
-
-        </VStack>
+   </VStack>
       <Box align={"center"} marginTop={"18px"} >  <Button colorScheme={"blue"} 
       bgGradient={'linear(to-l, #7928CA, #FF0080)'}
       _hover={{ bgGradient:'linear(to-l, #7928CA, orange)'}}
