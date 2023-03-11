@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+// importing loader component
 import { Loader } from "../components/loader";
 import axios from "axios"
 import { HStack, VStack,Text,Image, Box } from "@chakra-ui/react";
 import { Dashboard } from "../components/dashboard";
+// using  InfiniteScroll for handelling scrolling part
 import InfiniteScroll from "react-infinite-scroll-component";
 
 
@@ -20,7 +22,7 @@ export function Home(){
     const callApi=async()=>{
         setTimeout(async () => {
         let res=await axios.get(`https://randomuser.me/api/?page=${page}&results=15`);
-        console.log(res.data.results)
+      
           setUser([...user,...res.data.results]);
           setPage(page+1)
           setLoading(false);
