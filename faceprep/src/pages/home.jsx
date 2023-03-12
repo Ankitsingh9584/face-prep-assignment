@@ -54,7 +54,7 @@ export function Home(){
          {user && user.map((el)=>{
             return(
                 <>
-                <HStack w={"50%"} margin={"auto"} my={"15px"} textAlign={"center"} boxShadow={"lg"} p={"12px"}>
+                <HStack w={{base:"95%",md:"65%",lg:"50%"}} margin={"auto"} my={"15px"} textAlign={"center"} boxShadow={"lg"} p={"12px"}>
                     <Box w={"70%"}>
                     <Text fontSize={{base:"xl",md:"2xl",lg:"2xl"}} fontWeight={"bold"}> {el.name.first} {el.name.last}</Text>
                     </Box>

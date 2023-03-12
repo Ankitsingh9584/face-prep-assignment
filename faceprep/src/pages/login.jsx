@@ -1,6 +1,7 @@
 import { VStack,Input,Text, Button, Box,useToast,Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Dashboard } from "../components/dashboard";
 
 
 const userDetails={userName:"",password:""}
@@ -29,6 +30,7 @@ const checkUser=()=>{
     }
     // if username and password matches navigate to home page
 if(user.userName==="foo" && user.password==="bar"){
+    sessionStorage.setItem("auth","yes")
 return navigate("/home")
 }
 else{ 
@@ -47,8 +49,9 @@ else{
    
 return(
         <>
-        <Image w={{base:"45%",md:"35%",lg:'20%'}} h={"29px"} margin={"auto"} marginTop={"15px"} src="https://www.faceprep.in/statics/media/logo_web.47d10a50.svg"/>
-       <Box boxShadow={"md"} w={{base:"90%",md:"65%",lg:"38%"}} margin={"auto"} padding={"34px"} marginTop={"100px"}>
+        <Dashboard/>
+       
+       <Box boxShadow={"md"} w={{base:"90%",md:"65%",lg:"38%"}} margin={"auto"} padding={"34px"} marginTop={"40px"}>
        <Text fontSize={"4xl"} fontWeight={"bold"} align={"center"}>Login</Text>
         <VStack w={"90%"} align={"start"} margin={"auto"}>
             <Text fontWeight={"bold"} fontSize={"2xl"}>UserName :</Text>
