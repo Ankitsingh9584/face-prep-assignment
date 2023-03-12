@@ -50,11 +50,11 @@ export function Home(){
          loader={<Loader/> }
          endMessage={<h1>No more data</h1>}
       >
-        <VStack w={"100%"} margin={"auto"} marginTop={"25px"} >
+        <VStack w={"100%"} margin={"auto"} marginTop={"25px"}  >
          {user && user.map((el)=>{
             return(
                 <>
-                <HStack w={"100%"} margin={"auto"} textAlign={"center"}>
+                <HStack w={"50%"} margin={"auto"} my={"15px"} textAlign={"center"} boxShadow={"lg"} p={"12px"}>
                     <Box w={"70%"}>
                     <Text fontSize={{base:"xl",md:"2xl",lg:"2xl"}} fontWeight={"bold"}> {el.name.first} {el.name.last}</Text>
                     </Box>
